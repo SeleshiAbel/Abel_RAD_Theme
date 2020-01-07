@@ -46,28 +46,15 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		
-		<div class="nav-container ">
-			<nav id="site-navigation" class="navbar navbar-default main-navigation myTopnav">
-				
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'	 =>	'nav navbar-nav',
-					'theme_location'	=>'primary',
-					'depth'				=>2,
-					'container'			=>'div',
-					'container_class'	=>'collapse navbar-collapse',
-					'container_id'		=>'bs-example-navbar-collapse-1',
-				) );
-				?>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    				<i class="fa fa-bars"></i>
-  				</a>
-			</nav>
-					
-		</div>
-		
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle navbar-toggler-right" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'abel_rad_theme' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
