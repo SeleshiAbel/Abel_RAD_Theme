@@ -14,6 +14,18 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+	<div class="nav-container">
+			<nav id="site-navigation" class="navbar navbar-default main-navigation">
+				
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer',
+					'menu_id'        => 'footer-menu',
+					'menu_class'	 =>	'nav navbar-nav'
+				) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'abel_rad_theme' ) ); ?>">
 				<?php
