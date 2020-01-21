@@ -36,7 +36,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'abel_rad_theme' ), 'abel_rad_theme', '<a href="http://underscores.me/">Abel.S</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'abel_rad_theme' ), 'abel_rad_theme', 'Abel.S' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
