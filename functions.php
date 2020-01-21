@@ -6,7 +6,7 @@
  *
  * @package Abel_RAD_Theme
  */
-
+define('BOOTSTRAP_VERSION', '4.4.1');
 if ( ! function_exists( 'abel_rad_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -150,6 +150,11 @@ function abel_rad_theme_scripts() {
 	wp_register_script('popper', get_template_directory_uri() . '/src/js/popper.js',false,'',true);
 
 	wp_enqueue_script('popper');
+
+	wp_register_script('bootstrap', get_template_directory_uri(). 'src/js/bootstrap.bundle.min.js', array( 'jquery' ), BOOTSTRAP_VERSION, true);
+
+    wp_enqueue_script('bootstrap');
+    
 
 	wp_enqueue_script( 'abel_rad_theme-navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), '20151215', true );
 

@@ -26,9 +26,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'abel_rad_theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
+	<nav id="menu" class="navbar navbar-expand-md navbar-light navbar-expand-lg" role="navigation">
 		<div class="site-branding navbar-brand">
-			<?php
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="navbar-toggler-icon"></span>
+			  
+			  <?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_id'        => 'primary-menu',
+					'menu_class'	 =>	'nav navbar-nav',
+					'theme_location'	=>'primary',
+					'depth'				=>2,
+					'container'			=>'div',
+					'container_class'	=>'collapse navbar-collapse',
+					'container_id'		=>'bs-example-navbar-collapse-1',
+				) );
+				?>
+			</button>
+		<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -46,9 +62,12 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		
-		<div class="nav-container ">
-			<nav id="site-navigation" class="navbar navbar-default main-navigation myTopnav">
-				
+		<div class="collapse navbar-collapse nav-container ">
+			<nav id="site-navigation" class="navbar navbar-default main-navigation myTopnav collapse navbar-collapse">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+      
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -61,10 +80,9 @@
 					'container_id'		=>'bs-example-navbar-collapse-1',
 				) );
 				?>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    				<i class="fa fa-bars"></i>
-  				</a>
+				
 			</nav>
+			
 					
 		</div>
 		
