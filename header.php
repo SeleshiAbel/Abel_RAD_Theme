@@ -39,6 +39,25 @@
 					'theme_location'	=>'primary',
 					'depth'				=>2,
 					'container'			=>'div',
+					'container_class'	=>'collapse navbar-collapse',
+					'container_id'		=>'bs-example-navbar-collapse-1',
+				) );
+				?>
+			</button>
+		<?php
+	<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
+		<div class="site-branding navbar-brand">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="navbar-toggler-icon"></span>
+			  
+			  <?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_id'        => 'primary-menu',
+					'menu_class'	 =>	'nav navbar-nav',
+					'theme_location'	=>'primary',
+					'depth'				=>2,
+					'container'			=>'div',
 					'container_class'	=>'collapse navbar-collapse navbarCollapse',
 					'container_id'		=>'bs-example-navbar-collapse-1',
 					'walker'          => new abel_rad_theme_navbar()
@@ -87,6 +106,15 @@
 					
 		</div>
 		
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle navbar-toggler-right" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'abel_rad_theme' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<?php abel_custom_breadcrumbs(); ?>
 	<div id="content" class="site-content">
