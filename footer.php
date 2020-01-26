@@ -13,8 +13,8 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-	<div class="nav-container">
+	<footer id="colophon" class="site-footer navbar">
+	<div class="nav-container navbar">
 			<nav id="site-navigation" class="navbar navbar-default main-navigation">
 				
 				<?php
